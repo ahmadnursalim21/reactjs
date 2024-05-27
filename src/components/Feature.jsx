@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../shared/variants.js";
+
 const Feature = () => {
   return (
     <div className="md:px-12 px-4 mt-20">
@@ -5,7 +8,13 @@ const Feature = () => {
         <div className="flex flex-col md:flex-row justify-center items-center">
           <h1 className="text-4xl text-violet-900 font-bold mt-10">Feature</h1>
         </div>
-        <div className="flex flex-col md:flex-row space-x-3 items-center mt-10 space-y-5 sm:flex-wrap justify-center">
+        <motion.div
+          className="flex flex-col md:flex-row space-x-3 items-center mt-10 space-y-5 sm:flex-wrap justify-center"
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+        >
           <div className=" w-80 md:w-72 h-80 rounded-xl flex flex-col items-center shadow-xl cursor-pointer hover:translate-y-2 transition-all delay-600">
             <img
               src="/src/assets/f-1.svg"
@@ -72,7 +81,7 @@ const Feature = () => {
               Get Started
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

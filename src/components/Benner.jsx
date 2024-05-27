@@ -1,16 +1,29 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../shared/variants.js";
 const Benner = () => {
   return (
     <div className="md:px-12 mt-5  p-4  mx-auto">
       <div className="gradientBg rounded-xl rounded-br[-80px] md:p-9 px-4 py-9 bg-violet-300 rounded-br-[80px] sm:rounded-br-[150px]">
         <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-10">
-          <div>
+          <motion.div
+            variants={fadeIn("down", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+          >
             <img
               src="/src/assets/banner.svg"
               alt="Logo"
               className="w-80 xl:w-96"
             />
-          </div>
-          <div className="md:w-3/5 space-y-5">
+          </motion.div>
+          <motion.div
+            className="md:w-3/5 space-y-5"
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             <h2 className="text-3xl font-bold text-violet-800">
               Develop Your Skills
             </h2>
@@ -28,7 +41,7 @@ const Benner = () => {
                 Learn More
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
