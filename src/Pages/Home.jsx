@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Benner from "../components/Benner";
 import Hero from "../components/Hero";
+import Footer from "./../components/Footer";
+import Feature from "../components/Feature";
 const Home = () => {
   useEffect(() => {
     document.title = "Home";
@@ -11,6 +13,8 @@ const Home = () => {
       <Navbar />
       <Benner />
       <Hero />
+      <Feature />
+      <Footer />
     </>
   );
 };
