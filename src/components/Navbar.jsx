@@ -51,9 +51,9 @@ const Navbar = () => {
         </div>
       </nav>
       {/* navigate mobile  */}
-      <div className="block absolute  sm:hidden  h-screen right-0 w-2/3">
+      <div className="block absolute  sm:hidden  h-full right-0 w-2/3">
         {isOpen && (
-          <ul className="flex flex-col items-center justify-center  h-screen bg-violet-200 ">
+          <ul className="flex flex-col items-center justify-center  h-full bg-violet-200 ">
             {navbarlist.map(({ link, Path }) => (
               <a
                 key={link}
