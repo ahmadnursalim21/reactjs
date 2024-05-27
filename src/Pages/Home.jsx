@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Benner from "../components/Benner";
 import Hero from "../components/Hero";
 const Home = () => {
   useEffect(() => {
@@ -6,6 +8,8 @@ const Home = () => {
   }, []);
   return (
     <>
+      <Navbar />
+      <Benner />
       <Hero />
     </>
   );

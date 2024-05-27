@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className="z-50 sticky top-0 shadow-sm flex items-center justify-between w-screen">
+      <nav className="z-50 sticky top-0 flex items-center justify-between w-screen h-12 bg-violet-200 md:px-12 ">
         <div className="flex items-center">
           <div>
             <a className=" transition-all duration-300 " href={"/"}>
@@ -43,22 +43,22 @@ const Navbar = () => {
         <div className="block sm:hidden px-5">
           <button onClick={toogle}>
             {!isOpen ? (
-              <CiMenuFries className=" text-2xl text-gray-200 hover:text-gray-300 transition-all duration-300" />
+              <CiMenuFries className=" text-2xl text-violet-950 hover:text-violet-950 transition-all duration-300" />
             ) : (
-              <FaX className=" text-2xl text-gray-200 hover:text-gray-300 transition-all duration-300" />
+              <FaX className=" text-2xl  text-violet-950 hover:text-violet-950 transition-all duration-300" />
             )}
           </button>
         </div>
       </nav>
       {/* navigate mobile  */}
-      <div className="block absolute sm:hidden top-0 right-0 w-2/3">
+      <div className="block absolute  sm:hidden  h-screen right-0 w-2/3">
         {isOpen && (
-          <ul className="flex flex-col items-center justify-center  h-screen bg-black">
+          <ul className="flex flex-col items-center justify-center  h-screen bg-violet-200 ">
             {navbarlist.map(({ link, Path }) => (
               <a
                 key={link}
                 href={Path}
-                className="block mx-6 my-3 font-medium hover:text-gray-400 text-gray-200 transition-all duration-300"
+                className="block mx-6 my-3 font-bold hover:text-violet-700 text-violet-950 transition-all duration-300"
               >
                 {link}
               </a>
