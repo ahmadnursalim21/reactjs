@@ -9,35 +9,38 @@ const Navbar = () => {
   };
   const navbarlist = [
     { link: "Home", Path: "/" },
-    { link: "About", Path: "about" },
-    { link: "Contact", Path: "contact" },
+    { link: "About", Path: "/about" },
+    { link: "Contact", Path: "/contact" },
   ];
   return (
     <>
-      <nav className="bg-violet-500 flex justify-between items-center px-8 h-14 z-50 sticky top-0">
-        <div>
-          <a
-            className="text-2xl hover:text-gray-300 text-gray-200 transition-all duration-300 items-center"
-            href={"/"}
-          >
-            Warung ID
-          </a>
-        </div>
-        <div className="hidden sm:block">
-          <ul>
-            {navbarlist.map(({ link, Path }) => (
-              <a
-                key={link}
-                href={Path}
-                className="inline-block mx-6 font-medium hover:text-gray-400 text-gray-200 transition-all duration-300"
-              >
-                {link}
-              </a>
-            ))}
-          </ul>
+      <nav className="z-50 sticky top-0 shadow-sm flex items-center justify-between w-screen">
+        <div className="flex items-center">
+          <div>
+            <a className=" transition-all duration-300 " href={"/"}>
+              <img
+                src="./src/assets/logo.png"
+                alt="  Logo Coding"
+                className="w-20"
+              />
+            </a>
+          </div>
+          <div className="hidden sm:block">
+            <ul>
+              {navbarlist.map(({ link, Path }) => (
+                <a
+                  key={link}
+                  href={Path}
+                  className="inline-block text-xl mx-6 font-medium hover:text-violet-900 text-violet-600 transition-all duration-300"
+                >
+                  {link}
+                </a>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div className="block sm:hidden">
+        <div className="block sm:hidden px-5">
           <button onClick={toogle}>
             {!isOpen ? (
               <CiMenuFries className=" text-2xl text-gray-200 hover:text-gray-300 transition-all duration-300" />
@@ -48,9 +51,9 @@ const Navbar = () => {
         </div>
       </nav>
       {/* navigate mobile  */}
-      <div className="block absolute sm:hidden w-full bg-violet-400">
+      <div className="block absolute sm:hidden top-0 right-0 w-2/3">
         {isOpen && (
-          <ul className="flex flex-col items-center justify-center h-60">
+          <ul className="flex flex-col items-center justify-center  h-screen bg-black">
             {navbarlist.map(({ link, Path }) => (
               <a
                 key={link}

@@ -1,14 +1,19 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Benner from "./components/Benner";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Benner />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </>
   );
 }
