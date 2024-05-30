@@ -20,14 +20,14 @@ const Hero = () => {
             architecto quibusdam ipsa iusto.
           </p>
         </motion.div>
-        <div className="flex flex-col md:flex-row gap-10 flex-wrap">
-          <motion.div
-            className="card bg-white rounded-2xl shadow-2xl h-80 p-4 md:w-80 w-72 items-center flex flex-col cursor-pointer hover:translate-y-2 duration-300 transition-all"
-            variants={fadeIn("left", 0.4)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
-          >
+        <motion.div
+          variants={fadeIn("left", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}
+          className="flex flex-col md:flex-row gap-10 flex-wrap"
+        >
+          <div className="card bg-white rounded-2xl shadow-2xl h-80 p-4 md:w-80 w-72 items-center flex flex-col cursor-pointer hover:translate-y-2 duration-300 transition-all">
             <img
               src="/src/assets/develop.svg"
               alt=" "
@@ -37,14 +37,8 @@ const Hero = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
               illo?
             </p>
-          </motion.div>
-          <motion.div
-            className="card bg-white rounded-2xl shadow-2xl h-80 p-4 md:w-80 w-72 items-center flex flex-col cursor-pointer hover:translate-y-2 md:hover:translate-y-24 duration-300 transition-all md:translate-y-20"
-            variants={fadeIn("right", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-          >
+          </div>
+          <div className="card bg-white rounded-2xl shadow-2xl h-80 p-4 md:w-80 w-72 items-center flex flex-col cursor-pointer hover:translate-y-2 md:hover:translate-y-24 duration-300 transition-all md:translate-y-20">
             <img
               src="/src/assets/develop.svg"
               alt=" "
@@ -54,14 +48,8 @@ const Hero = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
               illo?
             </p>
-          </motion.div>
-          <motion.div
-            className="card bg-white rounded-2xl shadow-2xl h-80 p-4 md:w-80 w-72 items-center flex flex-col cursor-pointer hover:translate-y-2 duration-300 transition-all"
-            variants={fadeIn("left", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }}
-          >
+          </div>
+          <div className="card bg-white rounded-2xl shadow-2xl h-80 p-4 md:w-80 w-72 items-center flex flex-col cursor-pointer hover:translate-y-2 duration-300 transition-all">
             <img
               src="/src/assets/develop.svg"
               alt=" "
@@ -71,8 +59,8 @@ const Hero = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
               illo?
             </p>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
